@@ -36,7 +36,8 @@ string _gender, string
 _password);
 
 //functions
-void newUsers();        //create a new user and add to collection
+string getLast();
+string getUsername();
 void
 addFriend();       //search collection.firstname and collection.lastname to find user in collection and add to friend vector
 
