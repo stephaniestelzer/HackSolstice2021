@@ -61,18 +61,18 @@ void createAccount(){
     string password;
     string genderIdentity;
 
-     cout << "Please enter your first name." << endl;
-     cin >> firstName;
-     cout << "Please enter your last name." << endl;
-     cin >> lastName;
-     cout << "Please create a username." << endl;
-     cin >> username;
-     cout << "Please create a password." << endl;
-     cin >> password;
-     cout << "Please select your gender identity" << endl;
-     cin >> genderIdentity;
-     user(firstName, lastName, username, genderIdentity, password);
-     // add variables into a user constructor
+    cout << "Please enter your first name." << endl;
+    cin >> firstName;
+    cout << "Please enter your last name." << endl;
+    cin >> lastName;
+    cout << "Please create a username." << endl;
+    cin >> username;
+    cout << "Please create a password." << endl;
+    cin >> password;
+    cout << "Please select your gender identity" << endl;
+    cin >> genderIdentity;
+    user(firstName, lastName, username, genderIdentity, password);
+    // add variables into a user constructor
 }
 void supportEncouragement(){
     //have a database full of messages from friends for the computer
@@ -82,48 +82,24 @@ void supportEncouragement(){
 void inspirationMotivation(){
 
 }
-string writeMessage() {
-    string input;
-    int inputInt;
-    string message;
-    bool validInput;
+string writeMessageSupport() {
 
-    cout << "Which category would you like to write a message for?" << endl;
-    cout << "1. Support and Encouragement" << endl;
-    cout << "2. Inspiration and Motivation" << endl;
+    string messageSupport;
 
-    while (validInput == false) {
-        cin >> input;
+    cout << "Please first write a message for support and encouragement" << endl;
+    getline(cin, messageSupport);
 
-        try {
-            inputInt = stoi(input);
-        }
-        catch (const invalid_argument &ia) {
-            cout << "Please enter a number 1-2" << endl;
-            continue;
-        }
+    return messageSupport;
+}
 
-        if (inputInt > 2 || inputInt < 1) {
-            cout << "Please enter a number 1-2" << endl;
-        }
-        else {
-            validInput = true;
-        }
+string writeMessageInspo() {
 
-    }
+    string messageInspo;
 
-    if (inputInt == 1) {
-        cout << "What would you like to say for support and encouragement?" << endl;
-        cin.ignore();
-        getline(cin, message);
-    }
-    else if (inputInt == 2) {
-        cout << "What would you like to say for inspiration and motivation?" << endl;
-        cin.ignore();
-        getline(cin, message);
-    }
+    cout << "Now write a message for inspiration and motivation" << endl;
+    getline(cin, messageInspo);
 
-    return message;
+    return messageInspo;
 
     //database would sort the message into the correct category
 
@@ -168,7 +144,8 @@ int main() {
         inspirationMotivation();
     }
     else if (userChoiceInt == 3) {
-        writeMessage();
+        writeMessageInspo();
+        writeMessageSupport();
     }
 
 
