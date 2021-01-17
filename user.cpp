@@ -1,72 +1,79 @@
-//
-// Created by Stephanie Stelzer on 1/16/21.
-//
 #include <iostream>
 #include <string>
 #include <vector>
 #include "user.h"
-//using namespace std;
-/*string firstName, lastName;
-//string password;
-string genderIdentity;
-vector <user> collection;
-vector <user> friends;
+using namespace std;
 
-vector <string> inspirationInput;
-vector <string> supportInput;*/
+    //constructor
+    user::user()
+    {
+     firstName = "John";
+     lastName = "Doe";
+     username = "JohnDoe123";
+     genderIdentity = "NB";
+     vector <string> inspirationInput;
+     vector <string> supportInput;
 
-string userName;
+    }
 
-//constructor
-user::user()
-{
-    firstName = "John";
-    lastName = "Doe";
-    userName = "JohnDoe123";
-    genderIdentity = "NB";
-    vector <user> collection;
-    vector <user> friends;
-
-    vector <string> inspirationInput;
-    vector <string> supportInput;
+    user::user(string _first, string _last, string _username, string _gender, string _password)
+    {
+        firstName = _first;
+        lastName = _last;
+        username = _username;
+        genderIdentity = _gender;
 
 
-}
+        vector <string> inspirationInput;
+        vector <string> supportInput;
 
-/*user::user(string _first, string _last, string _username, string _gender; string _password)
-{
-firstName = _first;
-lastName = _last;
-userName = _username;
-genderIdentity = _gender;
+    }
 
-vector <user> collection;
-vector <user> friends;
+    //functions
+    string user::getLast()
+    {
+        return lastName;
+    }
 
-vector <string> inspirationInput;
-vector <string> supportInput;
+    string user::getUsername()
+    {
+        return username;
+    }
 
-}*/
+    string user::getPassword()
+    {
+        return password;
+    }
 
-//functions
-void user::newUsers()        //create a new user and add to collection
-{
 
-}
+    void user::addMotiveVector(string x)
+    {
+        inspirationInput.push_back(x);
+    }
 
-void user::addFriend()      //search collection.firstname and collection.lastname to find user in collection and add to friend vector
-{
+    void user::addSupportVector(string x)
+    {
+        supportInput.push_back(x);
+    }
 
-}
-void user::submit(int userchoice)
-{
+    int user::getMotiveSize()
+    {
+        return inspirationInput.size();
+    }
 
-}
+    int user::getSupportSize()
+    {
+        return supportInput.size();
+    }
 
-void user::relayMessage()
-{
+    void user::DisplayMotiveMessage(int x)
+    {
+        cout << inspirationInput.at(x) << endl;
+    }
 
-}
-
+    void user::DisplaySupportMessage(int x)
+    {
+        cout << supportInput.at(x) << endl;
+    }
 
 
