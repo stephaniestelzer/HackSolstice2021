@@ -7,6 +7,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+//#include "inspoMessage.h"
+//#include "encourageMessage.h"
 
 using namespace std;
 
@@ -28,16 +30,20 @@ public:
 //constructor
 user();
 
-user(string
-_first,
-string _last, string
-_username,
-string _gender, string
-_password);
+user(string _first, string _last, string _username, string _gender, string _password) {
+     //inspoMessage _inspo, encourageMessage _encourage) {
+    firstName = _first;
+    lastName = _last;
+    username = _username;
+    password = _password;
+    genderIdentity = _gender;
+    //inspoMessage();
+
+}
+
 
 //functions
-string getLast();
-string getUsername();
+void newUsers();        //create a new user and add to collection
 void
 addFriend();       //search collection.firstname and collection.lastname to find user in collection and add to friend vector
 

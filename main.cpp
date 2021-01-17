@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "user.h"
 using namespace std;
 void createAccount();
 void printMenu();
@@ -70,7 +71,7 @@ void createAccount(){
      cin >> password;
      cout << "Please select your gender identity" << endl;
      cin >> genderIdentity;
-     // user(firstName, lastName, username, genderIdentity, password);
+     user(firstName, lastName, username, genderIdentity, password);
      // add variables into a user constructor
 }
 void supportEncouragement(){
