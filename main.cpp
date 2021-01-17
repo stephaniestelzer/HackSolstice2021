@@ -27,7 +27,7 @@ void signIn (){
         try {
             userChoiceInt = stoi(userChoice);
         }
-        catch (const invalid_argument &ia) {
+        catch (...) {
             cout << "Please enter a number 1-2" << endl;
             continue;
         }
@@ -123,7 +123,7 @@ int main() {
         try {
             userChoiceInt = stoi(userChoice);
         }
-        catch (const invalid_argument &ia) {
+        catch (...) {
             cout << "Please enter a number 1-3" << endl;
             continue;
         }
